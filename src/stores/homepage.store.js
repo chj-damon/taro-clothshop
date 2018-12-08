@@ -1,6 +1,6 @@
 import { observable } from 'mobx';
 
-export const homepageStore = observable({
+const homepageStore = observable({
   banners: [],
   brands: [],
   productList: [],
@@ -17,3 +17,4 @@ homepageStore.fetchHomepageStaff = async function(data: any) {
   // });
   // console.log(result);
 };
+export default homepageStore;

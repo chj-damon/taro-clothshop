@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import PropTypes from 'nervjs/prop-types';
+import PropTypes from 'prop-types';
 import { View, Text, Image } from '@tarojs/components';
 import './index.scss';
 

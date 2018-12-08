@@ -1,7 +1,15 @@
+import '@tarojs/async-await';
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
-import { HomeIndex } from './pages/home';
-import stores from './stores';
+import HomeIndex from './pages/home';
+
+import counterStore from './stores/counter.store';
+import homepageStore from './stores/homepage.store';
+
+const stores = {
+  counterStore,
+  homepageStore
+};
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：

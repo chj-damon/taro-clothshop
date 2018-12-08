@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import PropTypes from 'nervjs/prop-types';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperItem, Image } from '@tarojs/components';
 import './index.scss';
 
@@ -13,7 +13,7 @@ export class MySwiper extends Component {
   };
 
   render() {
-    const { banner, home } = this.props;
+    const { banners, home } = this.props;
     return (
       <Swiper
         className={!home ? 'swiper-container' : 'swiper'}
@@ -32,7 +32,3 @@ export class MySwiper extends Component {
     );
   }
 }
-MySwiper.propTypes = {
-  banners: PropTypes.array.isRequired,
-  home: PropTypes.boolean
-};
