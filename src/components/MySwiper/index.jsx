@@ -32,3 +32,7 @@ export class MySwiper extends Component {
     );
   }
 }
+MySwiper.propTypes = {
+  banners: PropTypes.array,
+  home: PropTypes.bool
+};

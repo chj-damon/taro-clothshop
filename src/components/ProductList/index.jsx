@@ -2,12 +2,11 @@ import Taro, { Component } from '@tarojs/taro';
 import PropTypes from 'prop-types';
 import { View, Text, Image } from '@tarojs/components';
 import './index.scss';
-import { ProductItemModel } from '../../interfaces/product';
 
 /**
  * 商品列表
  */
-export class ProductList extends Component {
+export default class ProductList extends Component {
   static defaultProps = {
     list: [],
     loading: false
@@ -97,5 +96,5 @@ export class ProductList extends Component {
 }
 ProductList.propTypes = {
   list: PropTypes.array,
-  loading: PropTypes.boolean
+  loading: PropTypes.bool
 };

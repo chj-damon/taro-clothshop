@@ -1,8 +1,8 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Image, Text } from '@tarojs/components';
 import { inject, observer } from '@tarojs/mobx';
-import MySwiper from '../../components/MySwiper';
-import { ProductList } from '../../components/ProductList';
+import MySwiper from '../../components/MySwiper/index';
+import ProductList from '../../components/ProductList/index';
 
 @inject('homepageStore')
 @observer
@@ -27,7 +27,7 @@ export default class Index extends Component {
     return (
       <View className='home-page'>
         <MySwiper home banners={banners} />
-        {/* <View className='nav-list'>
+        <View className='nav-list'>
           {brands.map((item: any) => (
             <View className='nav-item' key={item.id}>
               <Image mode='widthFix' src={item.src} />
@@ -35,7 +35,7 @@ export default class Index extends Component {
           ))}
         </View>
         <Text className='recommend'>为你推荐</Text>
-        <ProductList list={productList} loading={loading} /> */}
+        <ProductList list={productList} loading={loading} />
       </View>
     );
   }
