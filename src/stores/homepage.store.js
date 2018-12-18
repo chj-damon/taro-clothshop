@@ -1,4 +1,5 @@
 import { observable } from 'mobx';
+import api from '../utils/api';
 
 const homepageStore = observable({
   banners: [],
@@ -9,12 +10,11 @@ const homepageStore = observable({
 });
 
 homepageStore.fetchHomepageStaff = async function(data: any) {
-  console.log(123);
-  // const result = await request({
-  //   url: '/homepage-v3',
-  //   method: 'GET',
-  //   data
-  // });
-  // console.log(result);
+  const result = await api({
+    url: '/homepage-v3',
+    method: 'GET',
+    data
+  });
+  console.log(result);
 };
 export default homepageStore;
